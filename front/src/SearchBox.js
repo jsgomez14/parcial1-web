@@ -19,7 +19,6 @@ class SearchBox extends Component {
         this.setState({
             input: un
         })
-        .then(console.log("State:"+this.state.input + " E inputAct: "+un))
     }
 
     //defaultValue={this.props.input ? this.props.input: ""} en el input
