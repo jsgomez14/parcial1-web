@@ -20,4 +20,5 @@ Follower.PropTypes = {
     follower: PropTypes.object.isRequired
 }
 
+
 export default Follower;
