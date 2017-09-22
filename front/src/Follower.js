@@ -8,10 +8,17 @@ class Follower extends Component{
         super(props);
     }
 
+
+    
+
+    submit(){
+        this.props.onSubmit(this.props.follower.login)
+        .then(this.props.setRecords(this.props.follower.login));
+    }
     render(){
         return(
         <div>
-            <button>{this.props.follower.login}</button>
+            <a href="#" onClick={this.submit()}>{this.props.follower.login}</a>
         </div>);
     }
 }

@@ -8,17 +8,17 @@ class SearchBox extends Component {
         this.state={
             input: ""
         }
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onSubmit(){
-        console.log("StateInput:"+this.state.input);        
         this.props.onSubmit(this.state.input);
     }
 
     handleUserNameOnChange(un){
         this.setState({
             input: un
-        })
+        });
     }
 
     //defaultValue={this.props.input ? this.props.input: ""} en el input
@@ -30,9 +30,8 @@ class SearchBox extends Component {
                     id="userName" onChange={(e)=>{this.handleUserNameOnChange(e.target.value)}}
                     >
                     </input>
-                    <button type="submit" onClick={()=>this.onSubmit.bind(this)}>Submit</button>
+                    <a onClick={this.onSubmit} href="#">Submit</a>
                 </form>
-                
             </div>
         );
     }

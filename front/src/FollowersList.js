@@ -7,10 +7,12 @@ class FollowersList extends Component {
         super(props);
     }
 
+    
+
     renderFollowers(){
         console.log(this.props.followers);
         return this.props.followers.map((t,i)=>{
-            return <Follower follower={t} key={i}/>;
+            return <Follower onSubmit={this.props.onSubmit} setRecords={this.props.setRecords} follower={t} key={i}/>;
         });
     }
 
