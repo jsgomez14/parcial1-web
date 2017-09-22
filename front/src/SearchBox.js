@@ -21,7 +21,6 @@ class SearchBox extends Component {
         });
     }
 
-    //defaultValue={this.props.input ? this.props.input: ""} en el input
     render(){
         return (
             <div className="SearchBox">
